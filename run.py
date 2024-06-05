@@ -1,10 +1,6 @@
 # import ffmpeg as ff
 import yt_dlp as yt
 from yt_dlp.utils import download_range_func
-
-
-# This is a script to trim a youtube video using ffmpeg
-# The script will take the youtube video link, start time and end time as input
 # Video link
 link = input("Enter the youtube link: ")
 # Start time
@@ -15,7 +11,7 @@ stime = hours*3600 + minutes*60 + seconds
 etime = input("Enter the end time: ")
 hours, minutes, seconds = map(int, etime.split(":"))
 etime = hours*3600 + minutes*60 + seconds
-# The script will download the video, trim the video and save it in the same directory
+# Function to download the video
 def download_video(youtube_link,start_time, end_time):
     yt_opts = {
         'verbose': False,
@@ -23,7 +19,6 @@ def download_video(youtube_link,start_time, end_time):
         'format': 'worst[height>=360]',
         'download_ranges': download_range_func(None, [(int(start_time), int(end_time))]),
         'force_keyframes_at_cuts': True,
-        # 'playlist_items': '3',
         
     }
     with yt.YoutubeDL(yt_opts) as ydl:
@@ -44,13 +39,4 @@ def download_video(youtube_link,start_time, end_time):
         # if the link is invalid
         else:
             print("Invalid link")
-        # print(info_dict)
-        # ydl.download(youtube_link)
 download_video(link,stime,etime)
-# The script will also delete the original video after trimming
-# def trim_video(start_time, end_time):
-#     # Trim the video using ffmpeg
-#     os.system(f'ffmpeg -i *.mp4 -ss {start_time} -to {end_time} -c copy output.mp4')
-#     # Delete the original video
-#     os.system('rm *.mp4')
-#
