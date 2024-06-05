@@ -1,6 +1,6 @@
 # Trimmer
 
-A simple python script to trim a clip from a Youtube video with a fixed quality (>=480p).
+A simple python script to trim a clip from a Youtube video with a fixed quality (>=360p).
 
 ## Requirements
 - Python 3
