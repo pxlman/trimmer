@@ -21,6 +21,3 @@ A simple python script to trim a clip from a Youtube video with a fixed quality 
 ## Warning
 - You must not use this script on a video with music inside.
 - The script is only for educational purposes.
-### Hint
-الهدف الرئيسي من هذا الكود هو مساعدة طلاب العلم عند العثور على فقرة هامة جدا من مرئيات الدروس يتمكنوا من نشرها بسهولة كي تعم الفائدة على من لا يجد الوقت لسماع الدرس/الخطبة كاملة, وهذا لدروس العلم الشرعي وغيره.
-ولكن يمنع منعا باااااتاااا استخدامه على فيديهوات بها موسيقى او متبرجة. ابرأت ذمتي
